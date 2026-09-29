@@ -1,0 +1,223 @@
+{
+  "seed": 20260928,
+  "base": {
+    "spot": 100.0,
+    "strike": 100.0,
+    "rate": 0.05,
+    "volatility": 0.2,
+    "maturity": 1.0
+  },
+  "black_scholes_benchmark": 10.450583572185565,
+  "replicated_experiments": [
+    {
+      "method": "Plain MC",
+      "payoff_evaluations": 1000,
+      "replications": 200,
+      "rmse": 0.4385576895303473,
+      "empirical_variance": 0.19311476331265412,
+      "mean_reported_se": 0.46475148283868783,
+      "interval_coverage": 0.975
+    },
+    {
+      "method": "Antithetic MC",
+      "payoff_evaluations": 1000,
+      "replications": 200,
+      "rmse": 0.32628307120148736,
+      "empirical_variance": 0.10689466157043699,
+      "mean_reported_se": 0.32784167274290854,
+      "interval_coverage": 0.94
+    },
+    {
+      "method": "Plain MC",
+      "payoff_evaluations": 4000,
+      "replications": 200,
+      "rmse": 0.22544579090264494,
+      "empirical_variance": 0.0509842287452091,
+      "mean_reported_se": 0.23291946214871398,
+      "interval_coverage": 0.955
+    },
+    {
+      "method": "Antithetic MC",
+      "payoff_evaluations": 4000,
+      "replications": 200,
+      "rmse": 0.16378522442200924,
+      "empirical_variance": 0.02689107535303316,
+      "mean_reported_se": 0.16444476621859494,
+      "interval_coverage": 0.965
+    },
+    {
+      "method": "Plain MC",
+      "payoff_evaluations": 16000,
+      "replications": 200,
+      "rmse": 0.11482354769101584,
+      "empirical_variance": 0.013219777997410071,
+      "mean_reported_se": 0.1163383779834344,
+      "interval_coverage": 0.955
+    },
+    {
+      "method": "Antithetic MC",
+      "payoff_evaluations": 16000,
+      "replications": 200,
+      "rmse": 0.08109898818428068,
+      "empirical_variance": 0.006556053030297719,
+      "mean_reported_se": 0.08237258601653112,
+      "interval_coverage": 0.955
+    },
+    {
+      "method": "Plain MC",
+      "payoff_evaluations": 64000,
+      "replications": 200,
+      "rmse": 0.06053149100102225,
+      "empirical_variance": 0.0036570569200744915,
+      "mean_reported_se": 0.05819758813255494,
+      "interval_coverage": 0.94
+    },
+    {
+      "method": "Antithetic MC",
+      "payoff_evaluations": 64000,
+      "replications": 200,
+      "rmse": 0.04113078044804119,
+      "empirical_variance": 0.0017002063340309473,
+      "mean_reported_se": 0.04109441284290407,
+      "interval_coverage": 0.94
+    }
+  ],
+  "variance_ratios": [
+    1.8065894075112758,
+    1.895953511560049,
+    2.0164232864372886,
+    2.15094888595323
+  ],
+  "jump_sensitivity": [
+    {
+      "sweep": "intensity",
+      "intensity": 0,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 10.450583572185565,
+      "price": 10.465428715060366,
+      "standard_error": 0.03284323390084547,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "intensity",
+      "intensity": 0.25,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 11.233283674622283,
+      "price": 11.247069868065035,
+      "standard_error": 0.03668332442011266,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "intensity",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 11.972377229788536,
+      "price": 11.98470682144588,
+      "standard_error": 0.04017345560058503,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "intensity",
+      "intensity": 0.75,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 12.672602259646807,
+      "price": 12.811077186315908,
+      "standard_error": 0.04423680803213205,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "intensity",
+      "intensity": 1,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 13.338079389367314,
+      "price": 13.277329088882523,
+      "standard_error": 0.046675044168366285,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "jump_std",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0,
+      "benchmark": 10.565886325797466,
+      "price": 10.625017285486384,
+      "standard_error": 0.033515998517560215,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "jump_std",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0.1,
+      "benchmark": 10.97621367836087,
+      "price": 10.95734416970904,
+      "standard_error": 0.03483110605958408,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "jump_std",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0.2,
+      "benchmark": 11.972377229788536,
+      "price": 11.975520305080686,
+      "standard_error": 0.040220219202873296,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "jump_std",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0.3,
+      "benchmark": 13.266305404024362,
+      "price": 13.26866206087441,
+      "standard_error": 0.050733936028381214,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    {
+      "sweep": "jump_std",
+      "intensity": 0.5,
+      "jump_mean": -0.05,
+      "jump_std": 0.4,
+      "benchmark": 14.74746783037343,
+      "price": 14.733229082284284,
+      "standard_error": 0.06698700289582436,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    }
+  ],
+  "example_estimates": {
+    "plain": {
+      "price": 10.451749650260552,
+      "standard_error": 0.0329845675648969,
+      "independent_observations": 200000,
+      "payoff_evaluations": 200000
+    },
+    "antithetic": {
+      "price": 10.417389374109952,
+      "standard_error": 0.023148208441551056,
+      "independent_observations": 100000,
+      "payoff_evaluations": 200000
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}
