@@ -2,11 +2,11 @@
 
 **How do simulation budget, variance reduction, and jump assumptions affect European-call estimates?**
 
-A numerical study developed from Andres Aguirre Torres's Penn State MATH 448 and MATH 451 honors projects. It compares plain and antithetic Monte Carlo with Black–Scholes pricing, then checks Merton jump-diffusion simulation against a Poisson-mixture benchmark.
+I developed this numerical study from my Penn State MATH 448 and MATH 451 honors projects. I compare plain and antithetic Monte Carlo with Black–Scholes pricing, then check Merton jump-diffusion simulation against a Poisson-mixture benchmark.
 
 ## Main result
 
-For a one-year, at-the-money call with spot and strike 100, annual interest rate 5%, and diffusion volatility 20%, antithetic sampling reduced empirical estimator variance by **1.8–2.2×** at equal payoff-evaluation budgets in the seeded experiment below.
+For a one-year, at-the-money call with spot and strike 100, annual interest rate 5%, and diffusion volatility 20%, I found that antithetic sampling reduced empirical estimator variance by **1.8–2.2×** at equal payoff-evaluation budgets in the seeded experiment below.
 
 Each row uses **200 independent replications per method**. The variance ratio is plain-MC variance divided by antithetic-MC variance; it is not a runtime speedup.
 
@@ -54,9 +54,9 @@ The pricing functions are in [pricing.py](pricing.py); the experiment design is 
 
 ![Merton simulation estimates and benchmark values as jump frequency and dispersion vary](results/jump_sensitivity.png)
 
-The jump sweeps hold the log-jump mean at −0.05. The left panel fixes its standard deviation at 0.20; the right fixes annual jump intensity at 0.50. Each simulated point uses 200,000 draws. Error bars represent pointwise sampling uncertainty, so they need not all cover their benchmarks. They do not measure uncertainty about the model parameters.
+I hold the log-jump mean at −0.05 in both sweeps. In the left panel, I fix its standard deviation at 0.20; in the right, I fix annual jump intensity at 0.50. Each simulated point uses 200,000 draws. Error bars represent pointwise sampling uncertainty, so they need not all cover their benchmarks. They do not measure uncertainty about the model parameters.
 
-The price at intensity 0.50 and log-jump standard deviation 0.20 is **11.97237723**, compared with **10.45058357** without jumps. This illustrates sensitivity to the selected model assumptions; no market calibration was performed.
+The price at intensity 0.50 and log-jump standard deviation 0.20 is **11.97237723**, compared with **10.45058357** without jumps. I use this comparison to illustrate sensitivity to the selected model assumptions; I have not calibrated the parameters to market data.
 
 ## Validation and limitations
 
@@ -69,4 +69,4 @@ This study prices European calls on a non-dividend-paying asset under constant p
 - Black, F. and Scholes, M. (1973). *The Pricing of Options and Corporate Liabilities*. Journal of Political Economy, 81(3), 637–654.
 - [Merton, R. C. (1976). *Option pricing when underlying stock returns are discontinuous*.](https://doi.org/10.1016/0304-405X%2876%2990022-2) Journal of Financial Economics, 3(1–2), 125–144.
 
-The September 2026 refactor, new benchmark, checks, experiments, and documentation were prepared with AI assistance. The established pricing models are credited above.
+I used AI assistance for the September 2026 refactor, new benchmark, checks, experiments, and documentation. I credit the established pricing models above.
